@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Home from './components/pages/Home';
+import ChargeCodes from './components/pages/ChargeCodes';
 
 import SideBar from './components/Sidebar';
 
@@ -13,6 +14,7 @@ export default function App() {
         <div id="page-wrap">
           <Switch>
             <Route path="/" exact component={Home} />
+            <Route path="/ChargeCodes" exact component={ChargeCodes} />
           </Switch>
         </div>
       </Router>
