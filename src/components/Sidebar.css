@@ -50,7 +50,7 @@ body {
   background: #373a47;
   padding: 2.5em 1.5em 0;
   /* font-size: 1.15em; */
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .bm-morph-shape {
@@ -63,4 +63,14 @@ body {
 
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-icon {
+  margin-right: 15px;
+}
+
+#author-tag {
+  font-size: 0.6em;
+  margin-top: 55vh;
+  font-weight: lighter;
 }
