@@ -9,11 +9,20 @@ function Home(props) {
     'No weatherDescription'
   );
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('eeeeee', event.target.cityName.value);
+    // console.log('E is', this.state.inputCity);
+    set_inputCity(event.target.cityName.value);
+  };
+
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
     // send HTTP request then save response to variable
     fetch(
-      'https://api.openweathermap.org/data/2.5/weather?q=Adelaide&appid=d4da841c84606053b9db5e5a9b5b800f'
+      'https://api.openweathermap.org/data/2.5/weather?q=' +
+        inputCity +
+        '&appid=d4da841c84606053b9db5e5a9b5b800f'
     )
       .then((response) => response.json())
       .then((data) => {
@@ -29,7 +38,7 @@ function Home(props) {
       <h1 class="home-title">wearther.io</h1>
 
       <div class="form-wrapper">
-        <form class="input-form">
+        <form class="input-form" onSubmit={handleSubmit}>
           <div class="form-group">
             <label class="input-label" for="exampleFormControlInput1">
               Enter city name
@@ -39,15 +48,11 @@ function Home(props) {
               class="form-control"
               id="cityName"
               placeholder=""
+              name="cityName"
             />
             <p>You entered: {inputCity}</p>
           </div>
-          <button
-            class="btn btn-success"
-            onClick={() => set_inputCity('Adelaide')}
-          >
-            Submit
-          </button>
+          <button class="btn btn-success">Submit</button>
         </form>
       </div>
 
