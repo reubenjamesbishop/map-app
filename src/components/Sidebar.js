@@ -7,7 +7,7 @@ import './Sidebar.css';
 
 export default (props) => {
   return (
-    <Menu disableAutoFocus isOpen={true}>
+    <Menu disableAutoFocus isOpen={false}>
       <a id="home" className="menu-item" href="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
