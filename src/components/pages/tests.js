@@ -28,12 +28,6 @@ export function spinningCube() {
   // === THREE.JS EXAMPLE CODE END ===
 }
 
-function beep() {
-  return 'beep';
-}
-
-var clicked = false;
-
 export function myFunc() {
   var scene = new THREE.Scene();
   var camera = new THREE.PerspectiveCamera(
@@ -55,11 +49,8 @@ export function myFunc() {
   var cube = new THREE.Mesh(geometry, material);
   var cube2 = new THREE.Mesh(geometry, material2);
 
-  // cube2.position = (0, 0, 1);
-
   scene.add(cube);
   scene.add(cube2);
-  // scene.add(mesh);
 
   camera.position.z = 5;
 
@@ -71,16 +62,13 @@ export function myFunc() {
     cube2.rotation.x += 0.02;
     cube2.rotation.y += 0.02;
 
-    // camera.position.z += 0.01;
     document.body.onkeyup = function (e) {
       console.log(e.keyCode);
 
       if (e.keyCode == 82) {
-        //r
         console.log('reset');
         camera.position.z = 5;
         camera.position.x = 0;
-        // camera.position.y = 0;
       } else if (e.keyCode == 87) {
         camera.position.z -= 0.5;
       } else if (e.keyCode == 83) {

@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 
 // Weather API
-// https://api.openweathermap.org/data/2.5/weather?q={Sydney}&appid={d4da841c84606053b9db5e5a9b5b800f}
+// https://api.openweathermap.org/data/2.5/weather?q={Sydney}&appid={apikey}
 
 function Home() {
   return (
