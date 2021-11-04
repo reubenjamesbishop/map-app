@@ -10,3 +10,13 @@
 p {
   color: white;
 }
+
+.input-label {
+  color: white;
+}
+
+.input-form {
+  width: 20vw;
+  margin: 0 auto;
+  padding-bottom: 5vh;
+}
