@@ -12,7 +12,7 @@ function Home(props) {
   const [weatherDescription, set_weatherDescription] = useState(
     'No weatherDescription'
   );
-  const [temp, set_temp] = useState('');
+  const [temp, set_temp] = useState(null);
   const [humidity, set_humidity] = useState('');
   const [wind, set_wind] = useState('');
   const [clothingRec, set_clothingRec] = useState('Banana');
@@ -42,11 +42,16 @@ function Home(props) {
   });
 
   useEffect(() => {
+    var shorts = false;
     console.log('Temp -->', temp);
-    if (temp < 10) {
-      set_clothingRec('FROSTY, wear pants');
+    if (temp == null) {
+      set_clothingRec('');
+    } else if (temp < 10) {
+      set_clothingRec('Long pants + Jumper.');
+    } else if (temp < 20) {
+      set_clothingRec('Long Pants + Tee-shirt.');
     } else {
-      set_clothingRec('TOASTY, wear shorts');
+      set_clothingRec('Shorts + Tee-shirt.');
     }
   });
 
@@ -75,7 +80,7 @@ function Home(props) {
       </div>
 
       <p>City: {cityName}</p>
-      <p>Temperature: {temp}C.</p>
+      <p>Temperature (°C): {temp}</p>
       <p>Humidity: {humidity}</p>
       <p>Wind: {wind}</p>
       <p>Weather is: {weatherDescription}</p>
