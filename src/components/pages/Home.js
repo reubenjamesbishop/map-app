@@ -35,7 +35,7 @@ function Home(props) {
 
   return (
     <div class="home-wrapper">
-      <h1 class="home-title">wearther.io</h1>
+      <h1 class="home-title">wearther.io :) </h1>
 
       <div class="form-wrapper">
         <form class="input-form" onSubmit={handleSubmit}>
@@ -57,7 +57,7 @@ function Home(props) {
       </div>
 
       <p>City: {cityName}</p>
-      <p>Weather description: {weatherDescription}</p>
+      <p>Weather description for your city: {weatherDescription}</p>
     </div>
   );
 }
