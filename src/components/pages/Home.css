@@ -4,5 +4,9 @@
   background: #23272a;
 }
 .home-title {
-  color: #5865f2;
+  color: hsl(235, 86%, 65%);
+}
+
+p {
+  color: white;
 }
