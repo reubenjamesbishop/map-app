@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
 
+function calculateClothing() {
+  return 'Tee shirt and long pants.';
+}
+
 function Home(props) {
   // Declare a new state variable, which we'll call "count"
   const [inputCity, set_inputCity] = useState('');
@@ -11,17 +15,15 @@ function Home(props) {
   const [temp, set_temp] = useState('');
   const [humidity, set_humidity] = useState('');
   const [wind, set_wind] = useState('');
+  const [clothingRec, set_clothingRec] = useState('Banana');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // console.log('eeeeee', event.target.cityName.value);
-    // console.log('E is', this.state.inputCity);
     set_inputCity(event.target.cityName.value);
   };
 
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
-    // send HTTP request then save response to variable
     fetch(
       'https://api.openweathermap.org/data/2.5/weather?q=' +
         inputCity +
@@ -37,6 +39,15 @@ function Home(props) {
         set_humidity(Math.round(data.main.humidity));
         set_wind(Math.round(data.wind.speed));
       });
+  });
+
+  useEffect(() => {
+    console.log('Temp -->', temp);
+    if (temp < 10) {
+      set_clothingRec('FROSTY, wear pants');
+    } else {
+      set_clothingRec('TOASTY, wear shorts');
+    }
   });
 
   return (
@@ -69,7 +80,7 @@ function Home(props) {
       <p>Wind: {wind}</p>
       <p>Weather is: {weatherDescription}</p>
       <h1 id="result-header">You should wear:</h1>
-      <h4 id="result-content">Tee-shirt and long pants.</h4>
+      <h4 id="result-content">{clothingRec}</h4>
     </div>
   );
 }
