@@ -75,3 +75,9 @@ body {
   margin-top: 55vh;
   font-weight: lighter;
 }
+
+#demo-header {
+  /* color: hsl(235, 86%, 65%); */
+  color: lightgray;
+  margin-bottom: 2vh;
+}

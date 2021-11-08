@@ -8,6 +8,7 @@ import SideBar from './components/Sidebar';
 import Home from './components/pages/Home';
 import ChargeCodes from './components/pages/ChargeCodes';
 import Counter from './components/pages/Counter';
+import Quiz from './components/pages/Quiz';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
             <Route path="/" exact component={Home} />
             <Route path="/ChargeCodes" exact component={ChargeCodes} />
             <Route path="/Counter" exact component={Counter} />
+            <Route path="/Quiz" exact component={Quiz} />
           </Switch>
         </div>
       </Router>

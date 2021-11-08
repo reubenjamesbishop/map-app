@@ -1,0 +1,23 @@
+.row {
+  /* border: 1px solid red; */
+
+  white-space: nowrap;
+  overflow-x: auto;
+  height: 100%;
+  /* margin-top: 5vh; */
+}
+
+.card {
+  /* border: 1px solid blue; */
+  width: 202px;
+
+  display: inline-block;
+  height: 100%;
+
+  margin: 0 10px 0 10px;
+}
+
+.card:hover {
+  opacity: 80%;
+  transition: 0.2s ease-out;
+}
