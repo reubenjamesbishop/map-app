@@ -1,10 +1,14 @@
-.row {
-  /* border: 1px solid red; */
+.page-wrapper {
+  background-color: blue;
+}
 
+.quiz-row {
   white-space: nowrap;
   overflow-x: auto;
-  height: 100%;
-  /* margin-top: 5vh; */
+  height: 50vh;
+
+  border: 1px solid red;
+  margin-bottom: 50px;
 }
 
 .card {
