@@ -13,7 +13,7 @@ function QuizCard(props) {
           height="150px"
         />
         <div class="card-body">
-          <h5 class="card-title">{props.name}</h5>
+          <h4 class="card-title">{props.name}</h4>
         </div>
       </div>
     </>
